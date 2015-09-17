@@ -104,10 +104,12 @@ public class Message implements Serializable {
      *  "sport-news-channel15" : "San Francisco 49er won last game"
      * </pre>
      */
+    @JsonProperty("user-data")
     public Map<String, Object> getUserData() {
         return userData;
     }
 
+    @JsonProperty("user-data")
     public void setUserData(Map<String, Object> userData) {
         this.userData = userData;
     }
@@ -116,10 +118,12 @@ public class Message implements Serializable {
     /**
      * Returns the SimplePush specific version number.
      */
+    @JsonProperty("simple-push")
     public String getSimplePush() {
         return simplePush;
     }
 
+    @JsonProperty("simple-push")
     public void setSimplePush(String simplePush) {
         this.simplePush = simplePush;
     }

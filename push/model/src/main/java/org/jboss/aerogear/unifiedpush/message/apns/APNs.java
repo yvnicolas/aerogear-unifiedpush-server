@@ -48,10 +48,12 @@ public class APNs implements Serializable {
      * Returns the value of the 'action-category', which is used on the client (iOS for now),
      * to invoke a certain "user action" on the device, based on the push message. Implemented for iOS8
      */
+    @JsonProperty("action-category")
     public String getActionCategory() {
         return actionCategory;
     }
 
+    @JsonProperty("action-category")
     public void setActionCategory(String actionCategory) {
         this.actionCategory = actionCategory;
     }
@@ -80,10 +82,12 @@ public class APNs implements Serializable {
      *
      * Not supported on other platforms.
      */
+    @JsonProperty("content-available")
     public boolean isContentAvailable() {
         return contentAvailable;
     }
 
+    @JsonProperty("content-available")
     public void setContentAvailable(boolean contentAvailable) {
         this.contentAvailable = contentAvailable;
     }
@@ -93,22 +97,28 @@ public class APNs implements Serializable {
      * This key is recognized in APNs for Safari.
      *
      */
+    @JsonProperty("url-args")
     public String[] getUrlArgs() { return urlArgs; }
 
+    @JsonProperty("url-args")
     public void setUrlArgs(String[] urlArgs) { this.urlArgs = urlArgs; }
 
     /**
      * The key to a title string in the Localizable.strings file for the current localization.
      */
+    @JsonProperty("localized-title-key")
     public String getLocalizedTitleKey() { return localizedTitleKey;}
 
+    @JsonProperty("localized-title-key")
     public void setLocalizedTitleKey(String localizedTitleKey) {this.localizedTitleKey = localizedTitleKey;}
 
     /**
      * Sets the arguments for the localizable title key
      */
+    @JsonProperty("localized-title-arguments")
     public String[] getLocalizedTitleArguments() { return localizedTitleArguments;}
 
+    @JsonProperty("localized-title-arguments")
     public void setLocalizedTitleArguments(String[] localizedTitleArguments) {this.localizedTitleArguments = localizedTitleArguments;}
 
 

@@ -41,10 +41,12 @@ public class Criteria implements Serializable {
      * Returns a list of user names or email addresses that will receive
      * a push notification.
      */
+    @JsonProperty("alias")
     public List<String> getAliases() {
         return aliases;
     }
 
+    @JsonProperty("alias")
     public void setAliases(List<String> aliases) {
         this.aliases = aliases;
     }
@@ -52,10 +54,12 @@ public class Criteria implements Serializable {
     /**
      * Returns a list of device types that will receive a push notification.
      */
+    @JsonProperty("deviceType")
     public List<String> getDeviceTypes() {
         return deviceTypes;
     }
 
+    @JsonProperty("deviceType")
     public void setDeviceTypes(List<String> deviceTypes) {
         this.deviceTypes = deviceTypes;
     }

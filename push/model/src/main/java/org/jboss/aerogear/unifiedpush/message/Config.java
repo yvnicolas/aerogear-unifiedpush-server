@@ -36,10 +36,12 @@ public class Config implements Serializable {
      *
      * If the 'ttl' key has not been specified on the submitted payload, this method will return -1.
      */
+    @JsonProperty("ttl")
     public int getTimeToLive() {
         return timeToLive;
     }
 
+    @JsonProperty("ttl")
     public void setTimeToLive(int timeToLive) {
         this.timeToLive = timeToLive;
     }
